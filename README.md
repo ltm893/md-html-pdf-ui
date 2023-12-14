@@ -9,7 +9,7 @@
 
  ## Usage
  * Select Box
-    * Text: Used for editing mardown file. Then click save button. 
+    * Text: Edit markdown file, then click save button 
     * Markdown:  Displays markdown file used to generate HTML
     * HTML: Displays HTML file used to generate PDF
     * PDF: Displays PDF file
