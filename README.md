@@ -17,6 +17,6 @@
 ## Under the hood
 * All files stored in /public directory
 * /config/properties file holds properties
-* cssFile can be manually updated to
+* cssFile can be manually updated
 * HTML boilerplate with in properties files can be manually updated
 
