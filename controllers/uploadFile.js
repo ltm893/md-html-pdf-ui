@@ -3,13 +3,18 @@
 const path = require('path');
 const { writeFile } = require('node:fs/promises');
 
-const fP = require('../config/properties') ; 
+const fPs = require('../config/properties') ; 
 
 exports.uploadFiles = async (req, res) => {
 
     try {
         const requestBody = req.body;
-        console.log("saving file")
+        await writeFile(fP.mdFile, requestBody['mdFile']);
+        res.json({
+            status: 200,
+            message: "OK"
+        })
+        /*
         Object.keys(requestBody).forEach( async key => {
             let fileName = key ;
             console.log(fileName) ; 
@@ -21,7 +26,7 @@ exports.uploadFiles = async (req, res) => {
                 message: "OK"
             })
         });
-       
+        */ 
     }
     catch (err) {
         console.error(err.message);

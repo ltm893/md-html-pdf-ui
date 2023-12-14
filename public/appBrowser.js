@@ -14,9 +14,11 @@ window.onload = () => {
 const sendFile = async () => {
     textBox.setAttribute("name", "mdFile");
     const formData = new FormData(formUpload);
+    /*
     for (const [key, value] of formData) {
         console.log(`${key}: ${value}`);
     }
+    */
     const response = await fetch('http://localhost:3000/upload', {
         method: 'POST',
         body: formData
