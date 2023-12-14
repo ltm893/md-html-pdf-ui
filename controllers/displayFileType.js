@@ -8,19 +8,6 @@ const puppeteer = require('puppeteer');
 
 const fP = require('../config/properties') ; 
 
-
-// const fileConverters = require("../utils/fileConverters");
-
-
-/*
-const filePathObj = {
-    mdFile: path.join(__dirname, '../public/markdownFile.md'),
-    htmlFile: path.join(__dirname, '../public/htmlFile.html'),
-    pdfFile: path.join(__dirname, '../public/pdfFile.pdf'),
-    cssFile: path.join(__dirname, '../public/cssFile.html'),
-}
-*/ 
-
 exports.mdFile = (req, res, next) => {
     try {
         res.sendFile(fP.mdFile);
