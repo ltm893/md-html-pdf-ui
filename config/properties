@@ -5,5 +5,20 @@ module.exports = {
     txtFile: path.join(__dirname, '../public/markdownFile.md'),
     cssFile: path.join(__dirname, '../public/cssFile.css'),
     htmlFile: path.join(__dirname, '../public/htmlFile.html'),
-    pdfFile: path.join(__dirname, '../public/pdfFile.pdf')
+    pdfFile: path.join(__dirname, '../public/pdfFile.pdf'), 
+    pdfFooter: '<div style="margin: 0 2cm; width: 75%; font-size: 9px; text-align: center;">Footer</div> ',
+    localUrl: 'http://localhost:3000/htmlFile.html',
+    htmlBeg: `<!DOCTYPE html>
+    <html lang="en">
+    <head>
+      <meta charset="UTF-8" />
+      <title>WebPageTitle</title>
+      <meta name="viewport" content="width=device-width,initial-scale=1" />
+      <meta name="description" content="" />
+      <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+      <link href='cssFile.css' rel='stylesheet' type='text/css'>
+    </head>
+    <body>`,
+    htmlEnd: '</body></html>' 
+
 }

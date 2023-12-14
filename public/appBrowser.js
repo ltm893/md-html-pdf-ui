@@ -28,9 +28,7 @@ const sendFile = async () => {
 
 formUpload.addEventListener('submit', (e) => {
     e.preventDefault()
-    // sendFile()
-     const changeEvent = new Event("change");
-    selectDoc.dispatchEvent(changeEvent)
+    sendFile()
 })
 
 //const buttonTa = document.getElementById('savedTa');
@@ -39,12 +37,12 @@ const selectDocEventHandler = async (event) => {
     let docType = event.srcElement.value;
     if (docType === 'txt') {
         showElementInClass('working', 'updateArea');
-        document.getElementById('displayDocument').setAttribute("src", '/txtfile');
-        /*
+       // document.getElementById('displayDocument').setAttribute("src", '/txtfile');
+        
         const response = await fetch("http://localhost:3000/txtfile");
         const text = await response.json();
         textBox.value = text.body;
-        */
+       
     }
     else if (docType === 'md') {
         showElementInClass('working', 'iframeArea');
