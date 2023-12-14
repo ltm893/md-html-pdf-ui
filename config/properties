@@ -1,0 +1,9 @@
+const path = require('path');
+
+module.exports = {
+    mdFile: path.join(__dirname, '../public/markdownFile.md') ,
+    txtFile: path.join(__dirname, '../public/markdownFile.md'),
+    cssFile: path.join(__dirname, '../public/cssFile.css'),
+    htmlFile: path.join(__dirname, '../public/htmlFile.html'),
+    pdfFile: path.join(__dirname, '../public/pdfFile.pdf')
+}

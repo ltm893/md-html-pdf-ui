@@ -1,0 +1,95 @@
+
+body {
+    color: #000000;
+    background: #EEEEEE;
+    margin: 20px 20px;
+    font-size: 100%;
+}
+#markdown-content {
+    margin:  20px auto ;
+    max-width: 800px;
+    padding: 40px 40px;
+    background: #FFFFFF ;
+    border: 1px solid #CCCCCC;
+    box-shadow: 2px 2px 4px #AAAAAA;
+    -webkit-box-shadow: 2px 2px 4px #AAAAAA;
+    font-family: 'Roboto' ; 
+    /* font-family: 'Ubuntu', sans-serif; */
+    font-size: 1em;
+    line-height: 1.2;
+}
+h1 {
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 140%;
+    margin: 0;
+    padding: 0;
+}
+h2 {
+    border-bottom: 1px solid #000000;
+    text-transform: uppercase;
+    font-size: 110%;
+    margin: .5em 0 0 0;
+    padding-bottom: .3em ;
+    text-align: center;
+
+}
+h3 {
+    font-size: 105%;
+    margin:.2em 0 .2em 0 ;
+    padding: 0;
+}   
+
+h4 {
+    font-size: 101%;
+    margin: 0.3em 0.5em ;
+    padding: 0;
+}
+
+p {
+    margin: 0.5em ;
+    padding: 0;
+}
+
+ul {
+    padding: 0;
+    margin: 0 2.5em ;
+    }
+
+h1 + ul  {
+    text-align: center;
+}
+
+h1 + ul > li {
+    display:inline ;
+    font-size: 95% ;
+}
+
+h1 + ul > li:before {
+    content: '\00a0\2022\00a0\00a0';
+}
+
+h1 + ul > li:first-child:before {
+    content: '';
+}
+
+@media screen and (max-width: 800px) {
+    body {
+        font-size: 100% ; 
+        margin: 0;
+        padding: 0;
+        background: #FFFFFF !important;
+    }
+    #markdown-content {
+        margin: 0;
+        padding: 2em;
+        border: 0px;
+        background: none;
+        box-shadow: none;
+        -webkit-box-shadow: none;
+    }
+}
+
+
+
+

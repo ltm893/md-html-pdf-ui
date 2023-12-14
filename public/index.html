@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>MdHtmlPdf</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="">
+    <style>
+        iframe {
+            display: block;
+            /* iframes are inline by default */
+            height: 100vh;
+            /* Set height to 100% of the viewport height */
+            width: 100vw;
+            /* Set width to 100% of the viewport width */
+            border: none;
+            /* Remove default border */
+            background: lightyellow;
+            /* Just for styling */
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div id="doc-selector">
+        <label id="selectLabel" for="selectDoc">Documents</label>
+        <select id="selectDoc">
+            <option value="txt">Text</option>
+            <option value="md">Mardown</option>
+            <option value="html">HTML </option>
+            <option value="pdf">PDF</option>
+        </select>
+    </div>
+
+    <div id="updateArea" class="working">
+        <form id="fileInputForm">
+             <textarea id="rawTextId"  class="form-control" rows="50" cols="80"></textarea>
+            <input type="submit" value="Save" class="btn">
+            
+          </form>
+          <h2></h2>
+          <h3></h3>
+    </div>
+
+    <div id="iframeArea" class="working" style="display:none">
+        <iframe id="displayDocument" height="90%" width="95%" title="description" contenteditable="true"></iframe>
+    </div>
+
+    </div>
+
+
+</body>
+
+</html>
+<script src="appBrowser.js" defer></script>
