@@ -22,13 +22,9 @@ exports.mdFile = (req, res, next) => {
 
 exports.htmlFile = async (req, res) => {
     try {
-        console.log("reading md file ")
-        console.log(fP.mdFile)
         const mdData = await readFile(fP.mdFile, { encoding: 'utf8' });
-        console.log("converting  md to html file");
         const converter = new showdown.Converter();
         const mainHtml = converter.makeHtml(mdData);
-        console.log("Writing HTML File");
         await writeFile(fP.htmlFile, fP.htmlBeg + mainHtml + fP.htmlEnd);
         res.sendFile(fP.htmlFile);
     } catch (err) {
@@ -88,7 +84,6 @@ exports.pdfFile = async (req, res, next) => {
 exports.txtFile = async (req, res, next) => {
     try {
         const fileString = await readFile(fP.txtFile, { encoding: 'utf8' });
-        console.log(fileString)
         res.json({body: fileString});
     } catch (err) {
         console.error(err.message);
