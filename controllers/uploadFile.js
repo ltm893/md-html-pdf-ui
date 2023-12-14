@@ -3,7 +3,7 @@
 const path = require('path');
 const { writeFile } = require('node:fs/promises');
 
-const fPs = require('../config/properties') ; 
+const fP = require('../config/properties') ; 
 
 exports.uploadFiles = async (req, res) => {
 

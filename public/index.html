@@ -8,7 +8,11 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="">
+    
     <style>
+        div {
+        padding:.2em ;   
+        }
         iframe {
             display: block;
             /* iframes are inline by default */
@@ -39,8 +43,9 @@
 
     <div id="updateArea" class="working">
         <form id="fileInputForm">
-             <textarea id="rawTextId"  class="form-control" rows="50" cols="80"></textarea>
-            <input type="submit" value="Save" class="btn">
+            <div><input type="submit" value="Save" class="btn"></div>
+            <div><textarea id="rawTextId"  class="form-control" rows="50" cols="80"></textarea></div>
+            
             
           </form>
           <h2></h2>
