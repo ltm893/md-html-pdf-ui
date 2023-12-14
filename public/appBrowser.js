@@ -5,11 +5,9 @@ const formUpload = document.getElementById('fileInputForm');
 
 window.onload = () => {
     const changeEvent = new Event("change");
-    selectDoc.dispatchEvent(changeEvent)
+    selectDoc.dispatchEvent(changeEvent) ;
+    
 };
-
-
-
 
 const sendFile = async () => {
     textBox.setAttribute("name", "mdFile");
@@ -24,39 +22,41 @@ const sendFile = async () => {
         body: formData
     })
     const json = await response.json()
-    console.log(json);
-
-}
+  }
 
 formUpload.addEventListener('submit', (e) => {
+    setMessage("Saving File") ; 
     e.preventDefault()
     sendFile()
 })
 
-//const buttonTa = document.getElementById('savedTa');
-
 const selectDocEventHandler = async (event) => {
     let docType = event.srcElement.value;
+   
     if (docType === 'txt') {
-        showElementInClass('working', 'updateArea');
-       // document.getElementById('displayDocument').setAttribute("src", '/txtfile');
-        
+        showElementInClass('working', 'updateArea');  
         const response = await fetch("http://localhost:3000/txtfile");
         const text = await response.json();
         textBox.value = text.body;
        
     }
     else if (docType === 'md') {
+ 
         showElementInClass('working', 'iframeArea');
         document.getElementById('displayDocument').setAttribute("src", '/mdfile');
+          
     }
     else if (docType === 'html') {
+       
         showElementInClass('working', 'iframeArea');
         document.getElementById('displayDocument').setAttribute("src", '/htmlfile');
+       
     }
     else if (docType === 'pdf') {
         showElementInClass('working', 'iframeArea');
+        document.getElementById('displayDocument').setAttribute("src", '');    
         document.getElementById('displayDocument').setAttribute("src", '/pdffile');
+       
     }
     else {
         return false;
@@ -65,8 +65,9 @@ const selectDocEventHandler = async (event) => {
 
 selectDoc.addEventListener('change', selectDocEventHandler, true);
 
-
-
+const setMessage = (message ) => {
+    document.getElementById('messageId').innerHTML = message ;
+ }
 
 const showElementInClass = (elClass, area) => {
     let els = document.getElementsByClassName(elClass);
@@ -78,4 +79,6 @@ const showElementInClass = (elClass, area) => {
         }
     })
 }
+
+
 
